@@ -11,6 +11,7 @@ public class RotateImage {
         AffineTransform transform = new AffineTransform();
         transform.rotate(Math.PI / 2, image.getWidth() / 2, image.getHeight() / 2);
         AffineTransformOp op = new AffineTransformOp(transform, AffineTransformOp.TYPE_BICUBIC);
+        
         return op.filter(image, null);
     }
 
